@@ -1,14 +1,13 @@
 import {StatusBar} from 'expo-status-bar';
 import {StyleSheet, Text, View} from 'react-native';
-import styles from "./styles";
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "react-native-screens/native-stack";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import Homescreen from "./screens/Home";
 import Search from "./screens/Search";
 import MyPage from "./screens/MyPage";
 import Cart from "./screens/Cart";
 import Wishlist from "./screens/Wishlist";
+import Home from "./screens/Home";
 
 
 
@@ -19,7 +18,7 @@ function BottomTabs() {
     return (<Tab.Navigator>
         <Tab.Screen options={{
             title: 'Home' + ''
-        }} name="home" component={Homescreen}/>
+        }} name="home" component={Home}/>
         <Tab.Screen options={{
             title: 'Search'
         }} name="search" component={Search}/>
@@ -36,21 +35,22 @@ function BottomTabs() {
 
 export default function App() {
     return (
-        <View style={styles.mainContainer}>
-            {/*<Text>Open up App.js to start working on your app!</Text>*/}
-            {/*<StatusBar style="auto" />*/}
-            <NavigationContainer>
-                <Stack.Navigator>
-                    <Stack.Screen
-                        name="Home"
-                        component={BottomTabs}
-                        options={{headerShown: false}}
-                    />
-                    <Stack.Screen name="mypage" component={MyPage}/>
-                    <Stack.Screen name="search" component={Search}/>
-                    <Stack.Screen name="wishlist" component={Wishlist}/>
-                </Stack.Navigator>
-            </NavigationContainer>
+        <View >
+            <Text>Open up App.js to start working on your app!</Text>
+            <StatusBar style="auto" />
+            <Home/>
+            {/*<NavigationContainer>*/}
+            {/*    <Stack.Navigator>*/}
+            {/*        <Stack.Screen*/}
+            {/*            name="Home"*/}
+            {/*            component={BottomTabs}*/}
+            {/*            options={{headerShown: false}}*/}
+            {/*        />*/}
+            {/*        <Stack.Screen name="mypage" component={Home}/>*/}
+            {/*        <Stack.Screen name="search" component={Search}/>*/}
+            {/*        <Stack.Screen name="wishlist" component={Wishlist}/>*/}
+            {/*    </Stack.Navigator>*/}
+            {/*</NavigationContainer>*/}
         </View>
     );
 }
