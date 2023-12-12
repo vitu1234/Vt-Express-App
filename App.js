@@ -10,6 +10,7 @@ import Wishlist from "./screens/Wishlist";
 import Home from "./screens/Home";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import {DrawerActions as navigation} from "@react-navigation/routers/src/DrawerRouter";
+import {DefaultTheme} from "react-native-paper";
 
 
 const Stack = createNativeStackNavigator();
@@ -37,7 +38,7 @@ function BottomTabs() {
                 />
             ),
             tabBarLabelStyle: {
-                fontSize: 14, // Font size of tab text
+                 // Font size of tab text
             },
             tabBarActiveTintColor: '#2196F3', // Color of the active tab
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
@@ -54,7 +55,7 @@ function BottomTabs() {
 
         <Tab.Screen options={{
             tabBarLabelStyle: {
-                fontSize: 14, // Font size of tab text
+                 // Font size of tab text
             },
             tabBarActiveTintColor: '#2196F3', // Color of the active tab
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
@@ -67,7 +68,7 @@ function BottomTabs() {
 
         <Tab.Screen options={{
             tabBarLabelStyle: {
-                fontSize: 14, // Font size of tab text
+                 // Font size of tab text
             },
             tabBarActiveTintColor: '#2196F3', // Color of the active tab
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
@@ -80,7 +81,7 @@ function BottomTabs() {
 
         <Tab.Screen options={{
             tabBarLabelStyle: {
-                fontSize: 14, // Font size of tab text
+                 // Font size of tab text
             },
             tabBarActiveTintColor: '#2196F3', // Color of the active tab
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
@@ -94,10 +95,18 @@ function BottomTabs() {
 }
 
 export default function App() {
+    const MyTheme = {
+        ...DefaultTheme,
+        colors: {
+            ...DefaultTheme.colors,
+            background: '#F0F1F9FF',
+        }
+    };
+
     return (
         <View style={styles.container}>
             <StatusBar style="auto"/>
-            <NavigationContainer>
+            <NavigationContainer theme={MyTheme}>
                 <Stack.Navigator>
                     <Stack.Screen
                         name="Home"

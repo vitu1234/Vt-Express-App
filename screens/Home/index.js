@@ -1,11 +1,19 @@
-import {Text, View} from "react-native";
-import styles from "../../styles";
+import {Text, View, StyleSheet} from "react-native";
+import Search from "../../components/Home/search";
 
 export default function Home() {
     return (
-        <View>
-            <Text style={styles.testTxt}>Homescreen</Text>
-            <Text>Open up App.js to start working on your app! Vituu</Text>
+        <View style={styles.homeContainer}>
+            {/*<Text>Homescreen</Text>*/}
+            <Search/>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    homeContainer:{
+        padding: 16,
+        backgroundColor: '#F0F1F9FF',
+        flex: 1
+    }
+})
