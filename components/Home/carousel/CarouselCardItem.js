@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 8,
         width: ITEM_WIDTH,
-        paddingBottom: 40,
+        // paddingBottom: 40,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
     },
     image: {
         width: ITEM_WIDTH,
-        height: 150,
+        height: 190,
+        borderRadius: 10
     },
     header: {
         color: "#222",

@@ -7,7 +7,7 @@ export default function Home() {
         <View style={styles.homeContainer}>
             {/*<Text>Homescreen</Text>*/}
             <Search/>
-            <SafeAreaView style={styles.container}>
+            <SafeAreaView style={styles.carouselContainer}>
                 <CarouselCards/>
             </SafeAreaView>
         </View>
@@ -20,9 +20,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#F0F1F9FF',
         flex: 1
     },
-    container: {
-        backgroundColor: '#fff',
-        alignItems: 'center',
+    carouselContainer: {
+        marginTop: 10,
+        // backgroundColor: '#fff',
+        // alignItems: 'center',
         justifyContent: 'center'
         // padding: 50
     },
