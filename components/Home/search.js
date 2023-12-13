@@ -45,14 +45,16 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         elevation: 1,
         borderColor: '#ffffff',
-        shadowColor: "black"
+        // shadowColor: "black"
     },
-    filterBtn: {},
+    filterBtn: {
+        shadowColor: 'black'
+    },
     filterPressable: {
         elevation: 1,
         borderRadius: 5,
         padding: 6,
-        shadowColor: 'black',
+        // shadowColor: 'black',
         flexDirection: 'row',
         alignItems: 'center',
         borderColor: "#ffffff"
