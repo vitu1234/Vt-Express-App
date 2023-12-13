@@ -5,11 +5,12 @@ import CarouselCards from "../../components/Home/carousel/CarouselCards";
 export default function Home() {
     return (
         <View style={styles.homeContainer}>
-            {/*<Text>Homescreen</Text>*/}
+
             <Search/>
             <SafeAreaView style={styles.carouselContainer}>
                 <CarouselCards/>
             </SafeAreaView>
+            <View style={{flex: 1}}></View>
         </View>
     );
 }
@@ -21,9 +22,10 @@ const styles = StyleSheet.create({
         flex: 1
     },
     carouselContainer: {
+        flex: 1,
         marginTop: 10,
         // backgroundColor: '#fff',
-        // alignItems: 'center',
+        alignItems: 'center',
         justifyContent: 'center'
         // padding: 50
     },
