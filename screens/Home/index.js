@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
         // marginTop: 10,
         // backgroundColor: '#fff',
         alignItems: 'center',
-        borderColor: '#fff',
-        elevation: 1
+        borderColor: '#fff'
         // justifyContent: 'center'w
         // padding: 50
     },
