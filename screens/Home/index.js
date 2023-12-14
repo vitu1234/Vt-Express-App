@@ -22,11 +22,15 @@ const styles = StyleSheet.create({
         flex: 1
     },
     carouselContainer: {
-        flex: 1,
-        marginTop: 10,
+        // paddingStart:55,
+        // paddingEnd:55,
+        // flex: 1,
+        // marginTop: 10,
         // backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'center'
+        borderColor: '#fff',
+        elevation: 1
+        // justifyContent: 'center'w
         // padding: 50
     },
 })
