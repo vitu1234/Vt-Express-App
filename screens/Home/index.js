@@ -1,17 +1,21 @@
-import {Text, View, StyleSheet, SafeAreaView} from "react-native";
+import {Text, View, StyleSheet, SafeAreaView, ScrollView} from "react-native";
 import Search from "../../components/Home/search";
 import CarouselCards from "../../components/Home/carousel/CarouselCards";
 
 export default function Home() {
     return (
-        <View style={styles.homeContainer}>
+        <ScrollView>
+            <View style={styles.homeContainer}>
 
-            <Search/>
-            <SafeAreaView style={styles.carouselContainer}>
-                <CarouselCards/>
-            </SafeAreaView>
-            <View style={{flex: 1}}></View>
-        </View>
+                <Search/>
+
+                <SafeAreaView style={styles.carouselContainer}>
+                    <CarouselCards/>
+                </SafeAreaView>
+                <View style={{flex: 1}}></View>
+
+            </View>
+        </ScrollView>
     );
 }
 
