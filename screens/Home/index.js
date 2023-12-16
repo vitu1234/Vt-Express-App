@@ -1,10 +1,12 @@
 import {Text, View, StyleSheet, SafeAreaView, ScrollView} from "react-native";
 import Search from "../../components/Home/search";
 import CarouselCards from "../../components/Home/carousel/CarouselCards";
+import CategoryCard from "../../components/Home/categories/CategoryCard";
+
 
 export default function Home() {
     return (
-        <ScrollView>
+        <ScrollView nestedScrollEnabled={true} style={{ width: "100%" }}>
             <View style={styles.homeContainer}>
 
                 <Search/>
@@ -12,6 +14,9 @@ export default function Home() {
                 <SafeAreaView style={styles.carouselContainer}>
                     <CarouselCards/>
                 </SafeAreaView>
+                {/*<SafeAreaView>*/}
+                {/*    <CategoryCard/>*/}
+                {/*</SafeAreaView>*/}
                 <View style={{flex: 1}}></View>
 
             </View>
