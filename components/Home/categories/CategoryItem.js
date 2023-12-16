@@ -1,14 +1,15 @@
 import {Pressable, Text, View, StyleSheet} from "react-native";
 
-const CategoryItem = ({category_name, bgColor,textColor, onPress}) => {
+const CategoryItem = ({category_name, bgColor, textColor, onPress}) => {
     return (
         <View style={styles.categoryItemContainer}>
-            <Pressable android_ripple={{color: "#ced474"}} onPress={onPress} style={{...styles.pressableView, backgroundColor: bgColor}}>
+            <Pressable android_ripple={{color: "#ced474"}} onPress={onPress}
+                       style={{...styles.pressableView, backgroundColor: bgColor}}>
                 <View style={styles.categoryItemInnerContainer}>
                     <Text
                         style={{...styles.title, color: textColor}}
                         numberOfLines={1} ellipsizeMode='tail'
-                        >{category_name}</Text>
+                    >{category_name}</Text>
                 </View>
             </Pressable>
         </View>
