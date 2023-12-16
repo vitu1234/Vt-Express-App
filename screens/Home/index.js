@@ -14,9 +14,9 @@ export default function Home() {
                 <SafeAreaView style={styles.carouselContainer}>
                     <CarouselCards/>
                 </SafeAreaView>
-                {/*<SafeAreaView>*/}
-                {/*    <CategoryCard/>*/}
-                {/*</SafeAreaView>*/}
+                <SafeAreaView>
+                    <CategoryCard/>
+                </SafeAreaView>
                 <View style={{flex: 1}}></View>
 
             </View>
