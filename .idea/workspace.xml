@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="started categories horizontal scroll flatlist and scrollview">
+    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/common/products/productCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/products/productItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home/categories/CategoryCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/categories/CategoryCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home/categories/CategoryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/categories/CategoryItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Home/carousel/CarouselCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/carousel/CarouselCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +23,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -78,6 +84,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\reactnative-recap\ZathuExpressApp\components\common\products" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
