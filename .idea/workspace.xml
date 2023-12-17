@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="first products item and card">
-      <change beforePath="$PROJECT_DIR$/components/common/products/productItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Home/products/productsRandom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/products/productCardVertical.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/products/productItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +85,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\reactnative-recap\ZathuExpressApp\components\Home\products" />
       <recent name="C:\xampp\htdocs\reactnative-recap\ZathuExpressApp\components\common\products" />
     </key>
   </component>
@@ -157,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702829089938</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="first products item and card">
+      <created>1702830284132</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702830284132</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
