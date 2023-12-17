@@ -13,7 +13,7 @@ const CarouselCards = () => {
     ]
 
     return (
-        <View style={{height: 200}}>
+        <View style={{height: 150}}>
             <SliderBox
                 dotColor="#2196F3"
                 // inactiveDotColor="#90A4AE"
