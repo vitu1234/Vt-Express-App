@@ -3,7 +3,7 @@ import {Dimensions, Image, StyleSheet, Text, View} from "react-native";
 const {width} = Dimensions.get('window');
 const previewCount = 2;
 const itemWidth = width / (previewCount + .5);
-const ProductCard = ({item}) => {
+const ProductCardVertical = ({item}) => {
     const format = amount => {
         return Number(amount)
             .toFixed(2)
@@ -31,11 +31,7 @@ const styles = StyleSheet.create({
         // marginTop: 13,
         // padding: 10
     },
-    flatListContainer: {
-        flexGrow: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    },
+
     itemContainer: {
         // padding: 16,
         alignItems: "center",
@@ -45,7 +41,7 @@ const styles = StyleSheet.create({
     image: {
         marginTop: 10,
         width: "100%",
-        height: 120,
+        height: 150,
         resizeMode: "cover",
         borderRadius: 5,
     },
@@ -53,7 +49,7 @@ const styles = StyleSheet.create({
         // padding: 16,
     },
     title: {
-        width: '100%',
+        // width: '100%',
         fontWeight: "bold",
         fontSize: 16,
 
@@ -81,12 +77,12 @@ const styles = StyleSheet.create({
 
     view: {
         // backgroundColor: '#000',
-        width: itemWidth - 20, //20 is margin left and right
+        width: itemWidth - 8, //20 is margin left and right
         marginLeft: 10,
         marginRight: 10,
         // marginBottom: 17,
         marginTop: 3,
-        height: '100%',
+        // height: '100%',
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
@@ -97,7 +93,7 @@ const styles = StyleSheet.create({
         color: '#aaa',
     },
     price: {
-        width: '100%',
+        // width: '100%',
         fontWeight: "bold",
         fontSize: 15,
         color: '#347af0',
@@ -106,4 +102,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default ProductCard;
+export default ProductCardVertical;

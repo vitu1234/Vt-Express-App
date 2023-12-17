@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from "react";
 import {View, StyleSheet, FlatList, Image, Text, Animated, Dimensions, TouchableOpacity} from "react-native";
 import {ExpandingDot} from "react-native-animated-pagination-dots";
 import {NumericFormat} from "react-number-format";
-import ProductCard from "./productCard";
+import ProductCardHorizontal from "../../common/products/productCardHorizontal";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 const {width} = Dimensions.get('window');
@@ -15,7 +15,7 @@ const ProductItem = () => {
         {
             id: "1",
             image: "https://www.bootdey.com/image/1260x750/8A2BE2/000000",
-            title: "Cute Catejejkr rjr",
+            title: "Cute Cate",
             subtitle: "Feline friend",
             price: 1000,
             currency: 'MWK'
@@ -116,7 +116,7 @@ const ProductItem = () => {
                 <Text style={styles.leftText}>Branded products you might like</Text>
                 <TouchableOpacity onPress={handleSeeMorePress}>
                     <Text style={styles.rightText}>See More <MaterialCommunityIcons
-                                                                                    name="greater-than" size={16}/>
+                        name="greater-than" size={16}/>
                     </Text>
                 </TouchableOpacity>
 
@@ -135,7 +135,7 @@ const ProductItem = () => {
                 // renderItem={renderItem}
                 renderItem={({item, index}) => (
 
-                    <ProductCard item={item}/>
+                    <ProductCardHorizontal item={item}/>
                 )
                 }
             />
@@ -180,7 +180,7 @@ const ProductItem = () => {
 
 const styles = StyleSheet.create({
     container: {
-        elevation:1,
+        elevation: 1,
         borderRadius: 8,
         flex: 1,
         backgroundColor: "rgba(255,255,255,0.68)",
@@ -188,8 +188,8 @@ const styles = StyleSheet.create({
         padding: 10
     },
     leftText: {
-        fontSize: 14,
-        fontWeight: "bold",
+        fontSize: 16,
+        fontWeight: "800",
         color: "black",
     },
     rightText: {
