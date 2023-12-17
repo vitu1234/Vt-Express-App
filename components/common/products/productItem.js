@@ -116,7 +116,7 @@ const ProductItem = () => {
                 <Text style={styles.leftText}>Branded products you might like</Text>
                 <TouchableOpacity onPress={handleSeeMorePress}>
                     <Text style={styles.rightText}>See More <MaterialCommunityIcons
-                                                                                    name="greater-than" size={16}/>
+                        name="greater-than" size={16}/>
                     </Text>
                 </TouchableOpacity>
 
@@ -180,7 +180,7 @@ const ProductItem = () => {
 
 const styles = StyleSheet.create({
     container: {
-        elevation:1,
+        elevation: 1,
         borderRadius: 8,
         flex: 1,
         backgroundColor: "rgba(255,255,255,0.68)",
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     },
     leftText: {
         fontSize: 14,
-        fontWeight: "bold",
+        fontWeight: "900",
         color: "black",
     },
     rightText: {
