@@ -1,6 +1,14 @@
-import React from "react";
-import {View, StyleSheet, FlatList, Image, Text, Animated, Dimensions} from "react-native";
+import React, {useEffect, useRef} from "react";
+import {View, StyleSheet, FlatList, Image, Text, Animated, Dimensions, TouchableOpacity} from "react-native";
 import {ExpandingDot} from "react-native-animated-pagination-dots";
+import {NumericFormat} from "react-number-format";
+import ProductCard from "./productCard";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
+const {width} = Dimensions.get('window');
+const previewCount = 2;
+const itemWidth = width / (previewCount + .5);
+const startScroll = (itemWidth * 3 / 4);
 
 const ProductItem = () => {
     const data = [
@@ -9,131 +17,184 @@ const ProductItem = () => {
             image: "https://www.bootdey.com/image/1260x750/8A2BE2/000000",
             title: "Cute Catejejkr rjr",
             subtitle: "Feline friend",
+            price: 1000,
+            currency: 'MWK'
         },
         {
             id: "2",
             image: "https://www.bootdey.com/image/1260x750/5F9EA0/000000",
             title: "Majestic Mountain",
             subtitle: "Natural wonder",
+            price: 3000,
+            currency: 'MWK'
         },
         {
             id: "3",
             image: "https://www.bootdey.com/image/1260x750/FF7F50/000000",
             title: "Delicious Pizza",
             subtitle: "Yum!",
+            price: 120000,
+            discount_percent: 9,
+            currency: 'MWK'
         },
         {
             id: "4",
             image: "https://www.bootdey.com/image/1260x750/00FFFF/000000",
             title: "Beautiful Beach",
             subtitle: "Paradise",
+            price: 109900,
+            discount_percent: 9,
+            currency: 'MWK'
         },
         {
             id: "5",
             image: "https://www.bootdey.com/image/1260x750/FF00FF/000000",
             title: "Crazy Concert",
             subtitle: "Rock on!",
+            price: 123000,
+            discount_percent: 1,
+            currency: 'MWK'
         },
     ];
-    const SCREEN_WIDTH = Dimensions.get("window").width;
-
-    const renderItem = ({item}) => {
-        return (
-            <View style={{...styles.itemContainer, width: SCREEN_WIDTH}}>
-                <Image source={{uri: item.image}} style={styles.image}/>
-                <View style={styles.textContainer}>
-                    <Text numberOfLines={1} ellipsizeMode='tail' style={styles.title}>{item.title}</Text>
-                    <Text numberOfLines={1} ellipsizeMode='tail' style={styles.subtitle}>{item.subtitle}</Text>
-                </View>
-            </View>
-        );
+    const flatlistRef = React.useRef();
+    const snapToOffsetsLikeGooglePlay = data.map((x, i) => {
+        return ((i * itemWidth) + startScroll)
+    })
+    const handleSeeMorePress = () => {
+        // Add your navigation logic or action here
+        console.log("See More clicked");
     };
+
+    // const renderItem = ({item}) => {
+    //     return (
+    //         <View style={{...styles.itemContainer}}>
+    //             <Image source={{uri: item.image}} style={styles.image}/>
+    //             <View style={styles.textContainer}>
+    //                 <Text numberOfLines={1} ellipsizeMode='tail' style={styles.title}>{item.title}</Text>
+    //                 <Text numberOfLines={1} ellipsizeMode='tail' style={styles.subtitle}>{item.subtitle}</Text>
+    //             </View>
+    //         </View>
+    //     );
+    // };
+
+    // const renderItem = ({item}) => {
+    //     // Format item.price as a string with a comma-separated currency
+    //
+    //
+    //     return (
+    //         <View style={styles.view}>
+    //             <Image source={{uri: item.image}} style={styles.image}/>
+    //             <View>
+    //                 <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
+    //                     {item.title}
+    //                 </Text>
+    //                 <Text numberOfLines={1} ellipsizeMode="tail" style={styles.subtitle}>
+    //                     {item.subtitle}
+    //                 </Text>
+    //                 <Text numberOfLines={1} ellipsizeMode="tail" style={{...styles.title, color: 'red'}}>
+    //                     {item.currency}
+    //                 </Text>
+    //                 {/*<Text><NumericFormat value={item.price.toFixed(2)} displayType={'text'} thousandSeparator={true}*/}
+    //                 {/*                     prefix={'$'}/></Text>*/}
+    //
+    //             </View>
+    //         </View>
+    //     );
+    // };
 
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
     return (
         <View style={styles.container}>
-            <View style={{flexDirection:'column'}}>
-                <Text>Do you like these products?</Text>
-                <Text >>></Text>
+            <View style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                // paddingHorizontal: 16, // Adjust as needed
+                marginTop: 8, // Adjust as needed
+            }}>
+                <Text style={styles.leftText}>Branded products you might like</Text>
+                <TouchableOpacity onPress={handleSeeMorePress}>
+                    <Text style={styles.rightText}>See More <MaterialCommunityIcons
+                                                                                    name="greater-than" size={16}/>
+                    </Text>
+                </TouchableOpacity>
+
             </View>
             <FlatList
+
                 showsHorizontalScrollIndicator={false}
-                onScroll={Animated.event(
-                    [{nativeEvent: {contentOffset: {x: scrollX}}}],
-                    {
-                        useNativeDriver: false,
-                    }
-                )}
+                showsVerticalScrollIndicator={false}
+                ref={flatlistRef}
                 pagingEnabled={true}
-                decelerationRate={"normal"}
-                scrollEventThrottle={10}
-                horizontal
+                horizontal={true}
+                decelerationRate={0}
+                snapToOffsets={snapToOffsetsLikeGooglePlay}
+                snapToAlignment={"center"}
                 data={data}
-                contentContainerStyle={styles.flatListContainer}
-                renderItem={renderItem}
-                keyExtractor={(item) => item.id}
-            />
-            <ExpandingDot
-                data={data}
-                expandingDotWidth={30}
-                scrollX={scrollX}
-                inActiveDotOpacity={0.6}
-                dotStyle={styles.paginationDotStyle}
-                containerStyle={styles.paginationContainer}
+                // renderItem={renderItem}
+                renderItem={({item, index}) => (
+
+                    <ProductCard item={item}/>
+                )
+                }
             />
         </View>
     );
+
+
+    // return (
+    //     <View style={styles.container}>
+    //         <View style={{flexDirection: 'column'}}>
+    //             <Text>Do you like these products?</Text>
+    //             <Text>>></Text>
+    //         </View>
+    //         <FlatList
+    //             showsHorizontalScrollIndicator={false}
+    //             onScroll={Animated.event(
+    //                 [{nativeEvent: {contentOffset: {x: scrollX}}}],
+    //                 {
+    //                     useNativeDriver: false,
+    //                 }
+    //             )}
+    //             pagingEnabled={true}
+    //             decelerationRate={"normal"}
+    //             scrollEventThrottle={10}
+    //             horizontal
+    //             data={data}
+    //             contentContainerStyle={styles.flatListContainer}
+    //             renderItem={renderItem}
+    //             keyExtractor={(item) => item.id}
+    //         />
+    //         <ExpandingDot
+    //             data={data}
+    //             expandingDotWidth={30}
+    //             scrollX={scrollX}
+    //             inActiveDotOpacity={0.6}
+    //             dotStyle={styles.paginationDotStyle}
+    //             containerStyle={styles.paginationContainer}
+    //         />
+    //     </View>
+    // );
 };
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: "#fff",
-    },
-    flatListContainer: {
-        flexGrow: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    itemContainer: {
-        padding: 16,
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-    },
-    image: {
-        width: "100%",
-        height: 200,
-        resizeMode: "cover",
+        elevation:1,
         borderRadius: 8,
+        flex: 1,
+        backgroundColor: "rgba(255,255,255,0.68)",
+        marginTop: 20,
+        padding: 10
     },
-    textContainer: {
-        padding: 16,
-    },
-    title: {
-        width: 250,
-        fontWeight: "bold",
-        fontSize: 18,
-
-    },
-    subtitle: {
+    leftText: {
         fontSize: 14,
-        color: "gray",
+        fontWeight: "bold",
+        color: "black",
     },
-    paginationContainer: {
-        position: "absolute",
-        bottom: 20,
-        // left: 0,
-        // right: 0,
-        alignItems: 'center'
-    },
-    paginationDotStyle: {
-        width: 10,
-        height: 5,
-        borderRadius: 5,
-        marginHorizontal: 8,
-        backgroundColor: "#347af0",
+    rightText: {
+        fontSize: 16,
+        color: "#347af0",
     },
 });
 
