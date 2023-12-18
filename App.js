@@ -62,7 +62,7 @@ function BottomTabs() {
             title: 'Search',
             tabBarLabel: 'Search',
             tabBarIcon: ({color, size}) => (
-                <MaterialCommunityIcons name="magnify" size={24}/>
+                <MaterialCommunityIcons name="magnify" color={color} size={size}/>
             ),
         }} name="search" component={Search}/>
 
@@ -74,8 +74,8 @@ function BottomTabs() {
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
             title: 'My Page',
             tabBarLabel: 'My Page',
-            tabBarIcon: () => (
-                <MaterialCommunityIcons name="account" size={24}/>
+            tabBarIcon: ({color, size}) => (
+                <MaterialCommunityIcons name="account" color={color} size={size}/>
             ),
         }} name="mypage" component={MyPage}/>
 
@@ -87,8 +87,8 @@ function BottomTabs() {
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
             title: 'Cart',
             tabBarLabel: 'Cart',
-            tabBarIcon: () => (
-                <MaterialCommunityIcons name="cart" size={24}/>
+            tabBarIcon: ({color, size}) => (
+                <MaterialCommunityIcons name="cart" color={color} size={size}/>
             ),
         }} name="cart" component={Cart}/>
     </Tab.Navigator>);
