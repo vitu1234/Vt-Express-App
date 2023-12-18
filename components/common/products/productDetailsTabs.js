@@ -1,5 +1,6 @@
 import {View, StyleSheet, Text, TouchableOpacity, Button} from "react-native";
 import {useState} from "react";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 const ProductDetailsTabs = () => {
     const [pressedTab, setPressedTab] = useState(0);
@@ -16,8 +17,17 @@ const ProductDetailsTabs = () => {
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </Text>
-                    <Button title="Add to Cart" onPress={() => {
-                    }}/>
+                    <View style={{flexDirection: 'row', marginTop: 10}}>
+                        <TouchableOpacity >
+                            <MaterialCommunityIcons  name="heart" color={'#2196F3'} size={34}/>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.outlinedButton} onPress={() => {
+                        }}>
+                            <Text style={styles.buttonText}>Add to Cart</Text>
+                        </TouchableOpacity>
+                    </View>
+
                 </View>
             )
         } else {
@@ -94,5 +104,21 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         textAlign: 'justify'
     },
-    tabContentContainer: {}
+    tabContentContainer: {},
+
+    outlinedButton: {
+        flex:1,
+
+        borderWidth: 1,
+        borderColor: '#2196F3',
+        borderRadius: 5,
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        marginStart:23
+    },
+    buttonText: {
+
+        color: '#2196F3',
+        textAlign:'center'
+    },
 })

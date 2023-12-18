@@ -1,6 +1,7 @@
 import {View, ScrollView, Image, Text, Button, FlatList} from 'react-native';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import ProductDetailsTabs from "./productDetailsTabs";
+import ProductsRandom from "../../Home/products/productsRandom";
 
 const ProductDetailView = () => {
     return (
@@ -26,7 +27,7 @@ const ProductDetailView = () => {
                               <Text style={styles.price}>MWK 150,000.00</Text>
                               <ProductDetailsTabs/>
 
-
+                                <ProductsRandom/>
                           </View>
 
                       </View>
