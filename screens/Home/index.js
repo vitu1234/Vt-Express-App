@@ -37,7 +37,9 @@ export default function Home() {
 
                 </View>
             }
-            ListFooterComponent={<ProductsRandom/>}
+            ListFooterComponent={<View>
+                <ProductsRandom/>
+            </View>}
 
         >
 

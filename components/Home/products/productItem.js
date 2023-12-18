@@ -104,6 +104,11 @@ const ProductItem = () => {
 
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
+    const handleOnPressProduct = (id) => {
+        console.log('Product Clicked: ',id)
+    }
+
+
     return (
         <View style={styles.container}>
             <View style={{
@@ -135,7 +140,7 @@ const ProductItem = () => {
                 // renderItem={renderItem}
                 renderItem={({item, index}) => (
 
-                    <ProductCardHorizontal item={item}/>
+                    <ProductCardHorizontal handleOnPressProduct={()=>handleOnPressProduct(item.id)} item={item}/>
                 )
                 }
             />

@@ -66,6 +66,10 @@ const ProductsRandom = () => {
         console.log("See More clicked");
     };
 
+    const handleOnPressProduct = (id) => {
+        console.log('Product Clicked: ', id)
+    }
+
 
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
@@ -101,7 +105,7 @@ const ProductsRandom = () => {
                 // renderItem={renderItem}
                 renderItem={({item, index}) => (
 
-                    <ProductCardVertical item={item}/>
+                    <ProductCardVertical handleOnPressProduct={() => handleOnPressProduct(item.id)} item={item}/>
                 )
                 }
             />

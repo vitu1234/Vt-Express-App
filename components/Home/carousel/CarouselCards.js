@@ -1,4 +1,4 @@
-import {Text, View} from "react-native";
+import {Text, TouchableOpacity, View} from "react-native";
 import {SliderBox} from "react-native-image-slider-box";
 
 const CarouselCards = () => {
@@ -13,7 +13,7 @@ const CarouselCards = () => {
     ]
 
     return (
-        <View style={{height: 150}}>
+        <TouchableOpacity style={{height: 150}}>
             <SliderBox
                 dotColor="#2196F3"
                 // inactiveDotColor="#90A4AE"
@@ -38,7 +38,7 @@ const CarouselCards = () => {
                 }}
             />
 
-        </View>
+        </TouchableOpacity>
     );
 };
 
