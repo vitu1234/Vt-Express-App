@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="fixed bottom tabs colors">
-      <change afterPath="$PROJECT_DIR$/screens/product/productDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/products/productDetailView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Home/products/productItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/products/productItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Home/products/productsRandom.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/products/productsRandom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/products/productCardVertical.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardVertical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/product/productDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/product/productDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702882195009</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed bottom tabs colors">
+      <created>1702883593535</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702883593535</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

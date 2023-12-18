@@ -1,5 +1,5 @@
 import {StatusBar} from 'expo-status-bar';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
@@ -11,6 +11,7 @@ import Home from "./screens/Home";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import {DrawerActions as navigation} from "@react-navigation/routers/src/DrawerRouter";
 import {DefaultTheme} from "react-native-paper";
+import ProductDetails from "./screens/product/productDetails";
 
 
 const Stack = createNativeStackNavigator();
@@ -38,7 +39,7 @@ function BottomTabs() {
                 />
             ),
             tabBarLabelStyle: {
-                 // Font size of tab text
+                // Font size of tab text
             },
             tabBarActiveTintColor: '#2196F3', // Color of the active tab
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
@@ -55,7 +56,7 @@ function BottomTabs() {
 
         <Tab.Screen options={{
             tabBarLabelStyle: {
-                 // Font size of tab text
+                // Font size of tab text
             },
             tabBarActiveTintColor: '#2196F3', // Color of the active tab
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
@@ -68,7 +69,7 @@ function BottomTabs() {
 
         <Tab.Screen options={{
             tabBarLabelStyle: {
-                 // Font size of tab text
+                // Font size of tab text
             },
             tabBarActiveTintColor: '#2196F3', // Color of the active tab
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
@@ -81,7 +82,7 @@ function BottomTabs() {
 
         <Tab.Screen options={{
             tabBarLabelStyle: {
-                 // Font size of tab text
+                // Font size of tab text
             },
             tabBarActiveTintColor: '#2196F3', // Color of the active tab
             tabBarInactiveTintColor: '#000', // Color of inactive tabs
@@ -118,6 +119,46 @@ export default function App() {
                     {/*<Stack.Screen name="mypage" component={Home}/>*/}
                     <Stack.Screen name="search" component={Search}/>
                     <Stack.Screen name="wishlist" component={Wishlist}/>
+                    <Stack.Screen
+                        options={{
+                            title: 'Product Details',
+                            headerRight: () => (
+
+                                <TouchableOpacity style={{
+                                    flexDirection: 'row',
+                                    justifyContent: 'flex-end',
+                                    alignItems: 'flex-start'
+                                }}>
+                                    <MaterialCommunityIcons name="cart" color={'#2196F3'} size={32}/>
+                                    <View style={{
+                                        marginStart: -12,
+                                        marginTop: -12,
+                                        backgroundColor: '#2196F3',
+                                        padding: 3,
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        borderRadius: 60, // Set to half of the width and height
+                                        width: 30, // Adjust as needed
+                                        height: 30, // Adjust as needed
+                                        paddingStart: 5,
+                                        paddingEnd: 5
+                                    }}>
+                                        <Text style={{
+                                            textAlign: 'center',
+                                            color: '#fff',
+                                            fontWeight: '700',
+                                            fontSize: 10
+                                        }}>109</Text>
+                                    </View>
+
+
+                                </TouchableOpacity>
+
+                            )
+                        }}
+                        name="product_details"
+                        component={ProductDetails}
+                    />
                 </Stack.Navigator>
             </NavigationContainer>
         </View>
