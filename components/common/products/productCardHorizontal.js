@@ -3,7 +3,7 @@ import {Dimensions, Image, StyleSheet, Text, TouchableOpacity, View} from "react
 const {width} = Dimensions.get('window');
 const previewCount = 2;
 const itemWidth = width / (previewCount + .5);
-const ProductCardHorizontal = ({item}) => {
+const ProductCardHorizontal = ({item, handleOnPressProduct}) => {
     const format = amount => {
         return Number(amount)
             .toFixed(2)
@@ -11,7 +11,7 @@ const ProductCardHorizontal = ({item}) => {
     };
 
     return (
-        <TouchableOpacity style={styles.view}>
+        <TouchableOpacity onPress={handleOnPressProduct} style={styles.view}>
             <Image source={{uri: item.image}} style={styles.image}/>
             <View style={{...styles.itemContainer, padding: 10}}>
                 <Text numberOfLines={1} ellipsizeMode='tail' style={styles.title}>{item.title}</Text>
