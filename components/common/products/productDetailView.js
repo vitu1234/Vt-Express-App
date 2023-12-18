@@ -1,24 +1,46 @@
-import { View, ScrollView, Image, Text, Button } from 'react-native';
+import {View, ScrollView, Image, Text, Button, FlatList} from 'react-native';
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import ProductDetailsTabs from "./productDetailsTabs";
 
 const ProductDetailView = () => {
     return (
-        <ScrollView style={styles.container}>
-            <Image style={styles.image} source={{ uri: 'https://via.placeholder.com/640x640/228B22' }} />
-            <View style={styles.info}>
-                <Text style={styles.name}>Product Name</Text>
-                <Text style={styles.price}>$99.99</Text>
-                <Text style={styles.description}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </Text>
-            </View>
-            <Button title="Add to Cart" onPress={() => {}} />
-        </ScrollView>
+        <FlatList style={styles.container}
+                  ListHeaderComponent={
+                      <View>
+                          <Image style={styles.image} source={{uri: 'https://via.placeholder.com/640x640/228B22'}}/>
+                          <View style={styles.info}>
+                              <View style={{
+                                  flexDirection: "row",
+                                  justifyContent: "space-between",
+                                  alignItems: "center"
+                              }}>
+                                  <Text style={styles.name}>Product Name</Text>
+                                  <View style={{flexDirection: 'row'}}>
+                                      <MaterialCommunityIcons name="star" color={'#2196F3'} size={19}/>
+                                      <Text style={{fontWeight: 'bold', fontSize: 16}}>4.9</Text>
+                                      <Text style={{fontSize: 16}}>(130)</Text>
+                                  </View>
+                              </View>
+
+                              <Text style={{color: '#7e7e7e'}}>Category </Text>
+                              <Text style={styles.price}>MWK 150,000.00</Text>
+                              <ProductDetailsTabs/>
+
+
+
+                          </View>
+                          <Button title="Add to Cart" onPress={() => {
+                          }}/>
+                      </View>
+                  }
+        />
     );
 };
 
 const styles = {
     container: {
         backgroundColor: '#fff',
+        height: '100%'
     },
     image: {
         width: '100%',
@@ -28,20 +50,15 @@ const styles = {
         padding: 20,
     },
     name: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 10,
+        fontSize: 19,
+        fontWeight: '500',
+        marginBottom: 5,
     },
     price: {
-        fontSize: 18,
-        color: '#999',
-        marginBottom: 20,
-    },
-    description: {
         fontSize: 16,
-        color: '#333',
-        lineHeight: 24,
-    },
+        color: '#2196F3',
+        marginBottom: 20,
+    }
 };
 
 export default ProductDetailView;
