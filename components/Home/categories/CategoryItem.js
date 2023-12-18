@@ -1,9 +1,9 @@
-import {Pressable, Text, View, StyleSheet} from "react-native";
+import {Pressable, Text, View, StyleSheet, TouchableOpacity} from "react-native";
 
 const CategoryItem = ({category_name, bgColor, textColor, onPress}) => {
     return (
         <View style={styles.categoryItemContainer}>
-            <Pressable android_ripple={{color: "#ced474"}} onPress={onPress}
+            <TouchableOpacity android_ripple={{color: "#ced474"}} onPress={onPress}
                        style={{...styles.pressableView, backgroundColor: bgColor}}>
                 <View style={styles.categoryItemInnerContainer}>
                     <Text
@@ -11,7 +11,7 @@ const CategoryItem = ({category_name, bgColor, textColor, onPress}) => {
                         numberOfLines={1} ellipsizeMode='tail'
                     >{category_name}</Text>
                 </View>
-            </Pressable>
+            </TouchableOpacity>
         </View>
     )
 };
