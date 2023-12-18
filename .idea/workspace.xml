@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="fixed bottom tabs colors">
-      <change afterPath="$PROJECT_DIR$/screens/product/productDetails.js" afterDir="false" />
+    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="on press added options for Description and Review">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home/products/productItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/products/productItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home/products/productsRandom.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/products/productsRandom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/products/productCardVertical.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardVertical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productDetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productDetailView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productDetailsTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productDetailsTabs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homescreen" />
+        <entry key="$PROJECT_DIR$" value="homescreen2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +40,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="product_details" />
+                    <option name="lastUsedInstant" value="1702906609" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1702525563" />
@@ -192,7 +192,35 @@
       <option name="project" value="LOCAL" />
       <updated>1702882195009</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed bottom tabs colors">
+      <created>1702883593535</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702883593535</updated>
+    </task>
+    <task id="LOCAL-00014" summary="pr">
+      <created>1702906615598</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702906615598</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added tabs on the page">
+      <created>1702916806600</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702916806600</updated>
+    </task>
+    <task id="LOCAL-00016" summary="on press added options for Description and Review">
+      <created>1702918453101</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702918453101</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +250,9 @@
     <MESSAGE value="first products item and card" />
     <MESSAGE value="added TouchableOpacity to buttons and other views" />
     <MESSAGE value="fixed bottom tabs colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bottom tabs colors" />
+    <MESSAGE value="pr" />
+    <MESSAGE value="added tabs on the page" />
+    <MESSAGE value="on press added options for Description and Review" />
+    <option name="LAST_COMMIT_MESSAGE" value="on press added options for Description and Review" />
   </component>
 </project>

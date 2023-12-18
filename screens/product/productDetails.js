@@ -1,9 +1,10 @@
 import {Text, View} from "react-native";
+import ProductDetailView from "../../components/common/products/productDetailView";
 
 const ProductDetails = () => {
     return (
         <View>
-            <Text>Product Details</Text>
+           <ProductDetailView/>
         </View>
     );
 };

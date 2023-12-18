@@ -4,6 +4,7 @@ import {ExpandingDot} from "react-native-animated-pagination-dots";
 import {NumericFormat} from "react-number-format";
 import ProductCardHorizontal from "../../common/products/productCardHorizontal";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import {useNavigation} from "@react-navigation/native";
 
 const {width} = Dimensions.get('window');
 const previewCount = 2;
@@ -56,6 +57,8 @@ const ProductItem = () => {
             currency: 'MWK'
         },
     ];
+
+    const navigation = useNavigation()
     const flatlistRef = React.useRef();
     const snapToOffsetsLikeGooglePlay = data.map((x, i) => {
         return ((i * itemWidth) + startScroll)
@@ -65,47 +68,14 @@ const ProductItem = () => {
         console.log("See More clicked");
     };
 
-    // const renderItem = ({item}) => {
-    //     return (
-    //         <View style={{...styles.itemContainer}}>
-    //             <Image source={{uri: item.image}} style={styles.image}/>
-    //             <View style={styles.textContainer}>
-    //                 <Text numberOfLines={1} ellipsizeMode='tail' style={styles.title}>{item.title}</Text>
-    //                 <Text numberOfLines={1} ellipsizeMode='tail' style={styles.subtitle}>{item.subtitle}</Text>
-    //             </View>
-    //         </View>
-    //     );
-    // };
-
-    // const renderItem = ({item}) => {
-    //     // Format item.price as a string with a comma-separated currency
-    //
-    //
-    //     return (
-    //         <View style={styles.view}>
-    //             <Image source={{uri: item.image}} style={styles.image}/>
-    //             <View>
-    //                 <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
-    //                     {item.title}
-    //                 </Text>
-    //                 <Text numberOfLines={1} ellipsizeMode="tail" style={styles.subtitle}>
-    //                     {item.subtitle}
-    //                 </Text>
-    //                 <Text numberOfLines={1} ellipsizeMode="tail" style={{...styles.title, color: 'red'}}>
-    //                     {item.currency}
-    //                 </Text>
-    //                 {/*<Text><NumericFormat value={item.price.toFixed(2)} displayType={'text'} thousandSeparator={true}*/}
-    //                 {/*                     prefix={'$'}/></Text>*/}
-    //
-    //             </View>
-    //         </View>
-    //     );
-    // };
 
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
     const handleOnPressProduct = (id) => {
-        console.log('Product Clicked: ',id)
+        navigation.navigate('product_details',
+            {
+                productId: id
+            })
     }
 
 

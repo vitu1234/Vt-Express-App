@@ -11,6 +11,8 @@ const previewCount = 2;
 const itemWidth = width / (previewCount + .5);
 const startScroll = (itemWidth * 3 / 4);
 
+import {useNavigation} from "@react-navigation/native";
+
 const ProductsRandom = () => {
     const data = [
         {
@@ -57,6 +59,8 @@ const ProductsRandom = () => {
             currency: 'MWK'
         },
     ];
+
+    const navigation = useNavigation()
     const flatlistRef = React.useRef();
     const snapToOffsetsLikeGooglePlay = data.map((x, i) => {
         return ((i * itemWidth) + startScroll)
@@ -64,10 +68,15 @@ const ProductsRandom = () => {
     const handleSeeMorePress = () => {
         // Add your navigation logic or action here
         console.log("See More clicked");
+
     };
 
     const handleOnPressProduct = (id) => {
         console.log('Product Clicked: ', id)
+        navigation.navigate('product_details',
+            {
+                productId: id
+            })
     }
 
 
