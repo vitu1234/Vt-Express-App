@@ -27,10 +27,8 @@ const ProductDetailView = () => {
                               <ProductDetailsTabs/>
 
 
-
                           </View>
-                          <Button title="Add to Cart" onPress={() => {
-                          }}/>
+
                       </View>
                   }
         />

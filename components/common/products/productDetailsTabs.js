@@ -1,4 +1,4 @@
-import {View, StyleSheet, Text, TouchableOpacity} from "react-native";
+import {View, StyleSheet, Text, TouchableOpacity, Button} from "react-native";
 import {useState} from "react";
 
 const ProductDetailsTabs = () => {
@@ -6,7 +6,28 @@ const ProductDetailsTabs = () => {
     const onPressedTab = (index) => {
         setPressedTab(index)
     }
+    const renderItem = () => {
+        if (pressedTab === 0) {
+            return (
+                <View>
 
+                    <Text style={styles.description}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </Text>
+                    <Button title="Add to Cart" onPress={() => {
+                    }}/>
+                </View>
+            )
+        } else {
+            return (
+                <View>
+                    <Text>Review</Text>
+                </View>
+            )
+        }
+    }
     return (
         <View>
             <View style={styles.tabButtonsMainContainer}>
@@ -32,12 +53,8 @@ const ProductDetailsTabs = () => {
                     ]}/>
                 </TouchableOpacity>
             </View>
+            {renderItem()}
 
-            <Text style={styles.description}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </Text>
         </View>
     );
 };
@@ -75,5 +92,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: '#333',
         lineHeight: 24,
-    }
+        textAlign: 'justify'
+    },
+    tabContentContainer: {}
 })
