@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="on press added options for Description and Review">
+    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="added favorite and add to cart plus the tabs on the product details page">
+      <change afterPath="$PROJECT_DIR$/components/reviews/reviewsItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/reviews/reviewsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/products/productDetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productDetailView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/common/products/productDetailsTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productDetailsTabs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +221,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702918453101</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="on press added options for Description and Review">
+      <created>1702920909087</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702920909087</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added favorite and add to cart plus the tabs on the product details page">
+      <created>1702920986722</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702920986722</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +268,7 @@
     <MESSAGE value="pr" />
     <MESSAGE value="added tabs on the page" />
     <MESSAGE value="on press added options for Description and Review" />
-    <option name="LAST_COMMIT_MESSAGE" value="on press added options for Description and Review" />
+    <MESSAGE value="added favorite and add to cart plus the tabs on the product details page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added favorite and add to cart plus the tabs on the product details page" />
   </component>
 </project>
