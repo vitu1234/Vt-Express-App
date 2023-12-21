@@ -1,6 +1,7 @@
 import {View, StyleSheet, Text, TouchableOpacity, Button} from "react-native";
 import {useState} from "react";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import ReviewsList from "../../reviews/reviewsList";
 
 const ProductDetailsTabs = () => {
     const [pressedTab, setPressedTab] = useState(0);
@@ -32,8 +33,8 @@ const ProductDetailsTabs = () => {
             )
         } else {
             return (
-                <View>
-                    <Text>Review</Text>
+                <View style={{marginTop:10}}>
+                    <ReviewsList/>
                 </View>
             )
         }
