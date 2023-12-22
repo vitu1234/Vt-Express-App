@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="added favorite and add to cart plus the tabs on the product details page">
-      <change afterPath="$PROJECT_DIR$/components/reviews/reviewsItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/reviews/reviewsList.js" afterDir="false" />
+    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="added reviews part">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Home/products/productItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/products/productItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Home/products/productsRandom.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home/products/productsRandom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productCardVertical.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardVertical.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productDetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productDetailView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/common/products/productDetailsTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productDetailsTabs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702920986722</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added reviews part">
+      <created>1703173884292</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703173884292</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +279,7 @@
     <MESSAGE value="added tabs on the page" />
     <MESSAGE value="on press added options for Description and Review" />
     <MESSAGE value="added favorite and add to cart plus the tabs on the product details page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added favorite and add to cart plus the tabs on the product details page" />
+    <MESSAGE value="added reviews part" />
+    <option name="LAST_COMMIT_MESSAGE" value="added reviews part" />
   </component>
 </project>
