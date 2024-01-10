@@ -59,9 +59,9 @@ function CartView() {
         },
         {
             id: "6",
-            image: "https://www.bootdey.com/image/1260x750/FF00FF/000000",
-            title: "Crazy Concert",
-            subtitle: "Rock on!",
+            image: "https://www.bootdey.com/image/1260x750/FF1FF/000000",
+            title: "Crazy Costume for Men",
+            subtitle: "Enjoy the customized costume for Halloween!",
             price: 123000,
             discount_percent: 1,
             currency: 'MWK',
@@ -75,7 +75,7 @@ function CartView() {
 
     }
     return (
-        <View >
+        <View>
             <FlatList
 
                 // showsHorizontalScrollIndicator={false}

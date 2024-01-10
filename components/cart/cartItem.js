@@ -85,6 +85,7 @@ const CartItem = ({item, handleOnPressProduct}) => {
                         <MaterialCommunityIcons name="plus" color={'#fff'} size={12}/>
                     </TouchableOpacity>
                     <Text style={styles.qtyText}>{item.qty}</Text>
+
                     <TouchableOpacity onPress={() => minusItemQty(item.id)}
                                       style={{...styles.iconButton, backgroundColor: 'red'}}>
                         <MaterialCommunityIcons name="minus" color={'#fff'} size={12}/>
