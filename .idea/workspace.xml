@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="changed product_details">
-      <change afterPath="$PROJECT_DIR$/components/cart/cartItem.js" afterDir="false" />
+    <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="cart modified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Cart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cart/cartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/cart/cartItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cart/cartView.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/cart/cartView.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +111,7 @@
       <updated>1702366542093</updated>
       <workItem from="1702366543470" duration="24964000" />
       <workItem from="1702638906921" duration="15211000" />
+      <workItem from="1704862219391" duration="12317000" />
     </task>
     <task id="LOCAL-00001" summary="fixed the layouts and the navigations">
       <created>1702370676447</created>
@@ -254,7 +253,21 @@
       <option name="project" value="LOCAL" />
       <updated>1703252378062</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="homescreen added borders to item">
+      <created>1704863195249</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1704863195249</updated>
+    </task>
+    <task id="LOCAL-00022" summary="cart modified">
+      <created>1704894945912</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1704894945912</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +303,8 @@
     <MESSAGE value="added favorite and add to cart plus the tabs on the product details page" />
     <MESSAGE value="added reviews part" />
     <MESSAGE value="changed product_details" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed product_details" />
+    <MESSAGE value="homescreen added borders to item" />
+    <MESSAGE value="cart modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart modified" />
   </component>
 </project>

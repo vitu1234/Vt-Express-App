@@ -1,92 +1,104 @@
-import {FlatList, Text, View} from "react-native";
-import CartItem from "../../components/cart/cartItem";
+import CartView from "../../components/cart/cartView";
+import React from 'react';
+import {Dimensions, FlatList, Image, Text, TouchableOpacity, View} from "react-native";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import {CheckBox} from "react-native-btr/src/Components/CheckBox";
+import {useState} from "react";
 
+const {width} = Dimensions.get('window');
+const previewCount = 2;
+const itemWidth = width / (previewCount + 0.5);
 
 export default function Cart() {
-    const data = [
-        {
-            id: "1",
-            image: "https://www.bootdey.com/image/1260x750/8A2BE2/000000",
-            title: "Cute Cate",
-            subtitle: "Feline friend",
-            price: 1000,
-            currency: 'MWK',
-            qty: 1,
-            available: 3
-        },
-        {
-            id: "2",
-            image: "https://www.bootdey.com/image/1260x750/5F9EA0/000000",
-            title: "Majestic Mountain",
-            subtitle: "Natural wonder",
-            price: 3000,
-            currency: 'MWK',
-            qty: 2,
-            available: 13
-        },
-        {
-            id: "3",
-            image: "https://www.bootdey.com/image/1260x750/FF7F50/000000",
-            title: "Delicious Pizza",
-            subtitle: "Yum!",
-            price: 120000,
-            discount_percent: 9,
-            currency: 'MWK',
-            qty: 4,
-            available: 23
-        },
-        {
-            id: "4",
-            image: "https://www.bootdey.com/image/1260x750/00FFFF/000000",
-            title: "Beautiful Beach",
-            subtitle: "Paradise",
-            price: 109900,
-            discount_percent: 9,
-            currency: 'MWK',
-            qty: 1,
-            available: 1
-        },
-        {
-            id: "5",
-            image: "https://www.bootdey.com/image/1260x750/FF00FF/000000",
-            title: "Crazy Concert",
-            subtitle: "Rock on!",
-            price: 123000,
-            discount_percent: 1,
-            currency: 'MWK',
-            qty: 1,
-            available: 20
-        },
-    ];
-
-
-    const handleOnPressProduct = (id) => {
-        console.log('Product CART Clicked: ', id)
-
-    }
 
 
     return (
-        <View>
+        <View style={styles.container}>
             <FlatList
-
-                // showsHorizontalScrollIndicator={false}
-                // showsVerticalScrollIndicator={false}
-                // ref={flatlistRef}
-                // pagingEnabled={true}
-                // horizontal={true}
-                // decelerationRate={0}
-                // snapToOffsets={snapToOffsetsLikeGooglePlay}
-                // snapToAlignment={"center"}
-                // numColumns={2}
-                data={data}
-                // renderItem={renderItem}
-                renderItem={({item, index}) => (
-
-                    <CartItem handleOnPressProduct={() => handleOnPressProduct(item.id)} item={item}/>
-                )
+                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
+                style={{marginBottom: 65}}
+                ListHeaderComponent={
+                    <CartView/>
                 }
             />
+            <View style={styles.positionInBottom}>
+                <View style={{
+                    flexDirection: 'row',
+                    marginTop: 10,
+                    marginBottom: 10,
+                    // padding: 16
+                }}>
+
+
+                    <TouchableOpacity style={{...styles.outlinedButton, backgroundColor: '#2196F3'}} onPress={() => {
+                    }}>
+                        <Text style={{...styles.buttonText, color: '#fff'}}>Checkout</Text>
+                    </TouchableOpacity>
+                </View>
+            </View>
+
         </View>
     );
 }
+const styles = {
+    container: {
+        // backgroundColor: '#fff',
+        height: '100%',
+        flexDirection: 'row'
+    },
+    flatlistContainer: {
+        flex: 1,
+        marginBottom: 70
+    },
+    image: {
+        width: '100%',
+        aspectRatio: 1,
+    },
+    info: {
+        padding: 20,
+    },
+    name: {
+        fontSize: 19,
+        fontWeight: '500',
+        marginBottom: 5,
+    },
+    price: {
+        fontSize: 16,
+        color: '#2196F3',
+        marginBottom: 20,
+    },
+    positionInBottom: {
+        position: 'absolute',
+        // left: 10, // Adjusted left property
+        // right: 10, // Added right property
+        width: '100%', // Adjusted width with -20 on both sides
+        bottom: 0,
+        // backgroundColor: '#fff',
+        zIndex: 100,
+        borderWidth: 1,
+        borderColor: 'rgba(204,204,204,0.29)',
+        // borderStyle:''
+
+    },
+
+
+    outlinedButton: {
+        flex: 1,
+
+        borderWidth: 1,
+        borderColor: '#2196F3',
+        borderRadius: 5,
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        marginStart: 7,
+        marginEnd: 7,
+    },
+    buttonText: {
+
+        color: '#2196F3',
+        textAlign: 'center'
+    },
+};
+
+

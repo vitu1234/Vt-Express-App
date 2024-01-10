@@ -6,7 +6,10 @@ import ProductsRandom from "../../Home/products/productsRandom";
 const ProductDetailView = () => {
     return (
         <View style={styles.container}>
-            <FlatList style={styles.flatlistContainer} ListHeaderComponent={
+            <FlatList
+                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
+                style={styles.flatlistContainer} ListHeaderComponent={
                 <View>
                     <Image style={styles.image} source={{uri: 'https://via.placeholder.com/640x640/228B22'}}/>
                     <View style={styles.info}>
@@ -42,7 +45,7 @@ const ProductDetailView = () => {
                     marginBottom: 20,
                     padding: 16
                 }}>
-                    <TouchableOpacity >
+                    <TouchableOpacity>
                         <MaterialCommunityIcons name="heart-outline" color={'#2196F3'} size={34}/>
                     </TouchableOpacity>
 
@@ -53,7 +56,7 @@ const ProductDetailView = () => {
 
                     <TouchableOpacity style={{...styles.outlinedButton, backgroundColor: '#2196F3'}} onPress={() => {
                     }}>
-                        <Text style={{...styles.buttonText,color:'#fff'}}>Buy Now</Text>
+                        <Text style={{...styles.buttonText, color: '#fff'}}>Buy Now</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -104,7 +107,7 @@ const styles = {
 
 
     outlinedButton: {
-        flex:1,
+        flex: 1,
 
         borderWidth: 1,
         borderColor: '#2196F3',
