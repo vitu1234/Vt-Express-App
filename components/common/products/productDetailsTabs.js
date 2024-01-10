@@ -18,16 +18,16 @@ const ProductDetailsTabs = () => {
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatc.
                     </Text>
-                    <View style={{flexDirection: 'row', marginTop: 10}}>
-                        <TouchableOpacity >
-                            <MaterialCommunityIcons  name="heart" color={'#2196F3'} size={34}/>
-                        </TouchableOpacity>
+                    {/*<View style={{flexDirection: 'row', marginTop: 10}}>*/}
+                    {/*    <TouchableOpacity >*/}
+                    {/*        <MaterialCommunityIcons  name="heart" color={'#2196F3'} size={34}/>*/}
+                    {/*    </TouchableOpacity>*/}
 
-                        <TouchableOpacity style={styles.outlinedButton} onPress={() => {
-                        }}>
-                            <Text style={styles.buttonText}>Add to Cart</Text>
-                        </TouchableOpacity>
-                    </View>
+                    {/*    <TouchableOpacity style={styles.outlinedButton} onPress={() => {*/}
+                    {/*    }}>*/}
+                    {/*        <Text style={styles.buttonText}>Add to Cart</Text>*/}
+                    {/*    </TouchableOpacity>*/}
+                    {/*</View>*/}
 
                 </View>
             )

@@ -86,7 +86,9 @@ const ProductItem = () => {
                 justifyContent: "space-between",
                 alignItems: "center",
                 // paddingHorizontal: 16, // Adjust as needed
-                marginTop: 8, // Adjust as needed
+                marginTop: 15,
+                marginBottom: 15,
+                // Adjust as needed
             }}>
                 <Text style={styles.leftText}>Branded products you might like</Text>
                 <TouchableOpacity onPress={handleSeeMorePress}>
