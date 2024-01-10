@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
         // backgroundColor: "rgba(255,255,255,0.41)",
         // marginTop: 13,
         // padding: 10
+
     },
 
     itemContainer: {
@@ -37,9 +38,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+
     },
     image: {
-        marginTop: 10,
+        // marginTop: 10,
         width: "100%",
         height: 150,
         resizeMode: "cover",
@@ -77,15 +79,19 @@ const styles = StyleSheet.create({
 
     view: {
         // backgroundColor: '#000',
-        width: itemWidth - 20, //20 is margin left and right
+        width: itemWidth - 10, //20 is margin left and right
         marginLeft: 10,
         marginRight: 10,
         // marginBottom: 17,
-        marginTop: 3,
+        // marginTop: 3,
         height: '100%',
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
+
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor:'rgba(204,204,204,0.29)'
     },
     text: {
         fontSize: 60,

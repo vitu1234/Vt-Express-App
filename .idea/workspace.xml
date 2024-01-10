@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb3d3f4b-d54b-4b8c-84bb-a546679b3fae" name="Changes" comment="changed product_details">
-      <change afterPath="$PROJECT_DIR$/components/cart/cartItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Cart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardHorizontal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/products/productCardVertical.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/products/productCardVertical.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +111,7 @@
       <updated>1702366542093</updated>
       <workItem from="1702366543470" duration="24964000" />
       <workItem from="1702638906921" duration="15211000" />
+      <workItem from="1704862219391" duration="872000" />
     </task>
     <task id="LOCAL-00001" summary="fixed the layouts and the navigations">
       <created>1702370676447</created>

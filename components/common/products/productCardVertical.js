@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
     },
     image: {
-        marginTop: 10,
+        // marginTop: 10,
         width: "100%",
         height: 170,
         resizeMode: "cover",
@@ -80,12 +80,16 @@ const styles = StyleSheet.create({
         width: itemWidth - 8, //20 is margin left and right
         marginLeft: 10,
         marginRight: 10,
-        // marginBottom: 17,
-        marginTop: 3,
+        marginBottom: 17,
+        // marginTop: 3,
         // height: '100%',
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
+
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor:'rgba(204,204,204,0.29)'
     },
     text: {
         fontSize: 60,
