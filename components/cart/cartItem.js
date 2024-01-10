@@ -39,7 +39,7 @@ const CartItem = ({item, handleOnPressProduct}) => {
             </TouchableOpacity>
             <View style={styles.itemContainer}>
                 <TouchableOpacity onPress={handleOnPressProduct}>
-                    <Text numberOfLines={1} ellipsizeMode='tail' style={styles.title}>
+                    <Text numberOfLines={3} ellipsizeMode='tail' style={styles.title}>
                         {item.title}
                     </Text>
                 </TouchableOpacity>
@@ -55,21 +55,14 @@ const CartItem = ({item, handleOnPressProduct}) => {
             <View style={styles.qtyCancelMainContainer}>
                 <View style={styles.checkboxContainer}>
 
-                    {/*<CheckBox*/}
-                    {/*    onPress={() => toggleCheckBox(item.id)}*/}
-                    {/*    checked={checkedStatus}*/}
-                    {/*    color={'#347af0'}*/}
-                    {/*/>*/}
-                    {/*<TouchableOpacity onPress={() => addItemQty(item.id)}*/}
-                    {/*                  style={{...styles.iconButton, alignItems: 'end'}}>*/}
-                    {/*    <MaterialCommunityIcons name="trash-can-outline" color={'#fff'} size={12}/>*/}
-                    {/*</TouchableOpacity>*/}
 
-
-                    <Text style={{color: '#fff'}}>Stzl</Text>
                     <TouchableOpacity onPress={() => addItemQty(item.id)} style={{
-                        ...styles.iconButton, backgroundColor: '#fff',
-                        marginHorizontal: 1
+                        backgroundColor: '#fff',
+                        marginHorizontal: 9,
+                        // padding: 5,
+                        borderRadius: 5,
+                        // marginBottom:8
+                        margin: 8
                     }}>
                         <CheckBox
                             onPress={() => toggleCheckBox(item.id)}
@@ -77,6 +70,10 @@ const CartItem = ({item, handleOnPressProduct}) => {
                             color={'#347af0'}
                         />
                     </TouchableOpacity>
+
+                </View>
+
+                <View style={styles.delBtnContainer}>
                     <TouchableOpacity onPress={() => minusItemQty(item.id)}
                                       style={{...styles.iconButton, backgroundColor: 'red'}}>
                         <MaterialCommunityIcons name="trash-can-outline" color={'#fff'} size={12}/>
@@ -103,11 +100,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginLeft: 10,
         marginRight: 10,
-        marginBottom: 17,
-        marginTop: 3,
+        // marginBottom: 17,
+        marginTop: 5,
         borderRadius: 10,
         backgroundColor: '#fff',
-        elevation: 1
+        elevation: 1,
+        height: 120,
+        borderColor: 'rgba(204,204,204,0.29)',
+        borderStyle: 'solid'
     },
     itemContainer: {
         padding: 16,
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
         left: 2
     },
     image: {
-        width: 90,
-        height: 100,
+        width: 100,
+        height: 120,
         resizeMode: "cover",
         borderRadius: 5,
     },
@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
     subtitle: {
         fontSize: 14,
         color: "gray",
+        marginTop: 3,
         marginBottom: 3,
     },
     price: {
@@ -144,38 +145,38 @@ const styles = StyleSheet.create({
     },
     qtyCancelMainContainer: {
         flexDirection: "column",
-        backgroundColor: "#fff",
-        // position: 'relative', // Make sure it establishes a positioning context for absolute child
-        // alignItems: 'flex-start', // Align children to the top
+        // backgroundColor: "green",
+
     },
     checkboxContainer: {
+        alignItems: 'flex-end',
         // flexDirection: 'row',
-        // alignItems: 'center',
-        marginTop: 10,
-
-        // backgroundColor:'red',
-        flexDirection: 'row',
-        // alignItems: 'center',
-        // marginTop: 18,
         // flex: 1
-    }, qtyContainer: {
-        // backgroundColor:'red',
+        // padding:5
+    },
+    qtyContainer: {
         flexDirection: 'row',
-        // alignItems: 'center',
-        // marginTop: 18,
-        // flex: 1
+        flex: 1,
+        marginRight: 6
     },
     iconButton: {
         backgroundColor: '#2196F3',
         padding: 8,
         borderRadius: 5,
-        marginHorizontal: 5,
+        marginBottom: 12
+        // marginHorizontal: 5,
     },
     qtyText: {
         fontSize: 16,
         marginHorizontal: 8,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginTop: 5
     },
+    delBtnContainer: {
+        flex: 1,
+        alignItems: 'flex-end',
+        marginRight: 6
+    }
 });
 
 export default CartItem;
